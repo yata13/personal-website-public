@@ -88,7 +88,9 @@ form.addEventListener('submit', async (e) => {
   const body = Object.fromEntries(new FormData(form).entries());
   if (body.website) return; // honeypot
 
-  const res = await fetch('https://personal-website-yvbf.onrender.com', {
+const API_BASE = 'https://personal-website-yvbf.onrender.com';
+    
+const res = await fetch(`${API_BASE}/api/message`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
