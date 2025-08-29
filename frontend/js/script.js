@@ -81,26 +81,3 @@ ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
 
 // ===================
-const form = document.getElementById('form');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const body = Object.fromEntries(new FormData(form).entries());
-  if (body.website) return; // honeypot
-
-const API_BASE = 'https://personal-website-yvbf.onrender.com';
-    
-const res = await fetch(`${API_BASE}/api/message`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
-  });
-
-  const data = await res.json();
-  if (res.ok) {
-    alert('Message sent ✅');
-    form.reset();
-  } else {
-    alert(data.error || 'Failed to send');
-  }
-});
