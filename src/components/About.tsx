@@ -5,13 +5,32 @@ import { GEAR_ITEMS } from "../data";
 
 const CERTIFICATIONS = [
   {
+    id: "freecodecamp-javascript",
+    title: "JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
+    img: "https://i.postimg.cc/DyjkkWXJ/www-freecodecamp-org-certification-fccb7567588-a030-4ec6-b5bc-9a683bc89e33-javascript-v9.png",
+    type: "JavaScript Certification",
+    date: "2026"
+  },
+  {
     id: "geeztech-security-tester",
     title: "Geeztech Security Tester",
     issuer: "Geeztech Cyber Security Course",
     img: "https://i.postimg.cc/ZnnzZfnm/photo-2026-07-12-12-38-17.jpg",
     type: "Cyber Security Certificate",
     date: "2023"
-  }
+  },
+  // TODO (Yared): your Full-Stack course certificate.
+  // Replace the PLACEHOLDER text below and paste your certificate image URL into `img`.
+  // (It will show a broken image until you add a real URL — so edit this before going live.)
+  {
+    id: "fullstack-course",
+    title: "Full-Stack Web Development",       // <-- EDIT: exact certificate name
+    issuer: "PLACEHOLDER — add issuer",        // <-- EDIT: e.g. Meta, Coursera, etc.
+    img: "PLACEHOLDER_PASTE_IMAGE_URL_HERE",   // <-- EDIT: paste your certificate image link
+    type: "Full-Stack Certification",          // <-- EDIT if you want a different label
+    date: "2026"                               // <-- EDIT: year you earned it
+  },
 ];
 
 export default function About() {
