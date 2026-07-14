@@ -1,0 +1,24 @@
+# Netlify configuration for the Yared Tesfahun portfolio.
+# Builds the static frontend and wires the AI chat to a serverless function.
+
+[build]
+  command = "vite build"       # builds the static site into dist/
+  publish = "dist"             # folder Netlify serves
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Send the frontend's /api/gemini/chat request to the serverless AI function.
+# (status = 200 means "rewrite" — the browser URL stays /api/gemini/chat, so the
+#  frontend code needs no changes.) This rule MUST come before the SPA fallback below.
+[[redirects]]
+  from = "/api/gemini/chat"
+  to = "/.netlify/functions/gemini-chat"
+  status = 200
+
+# Single-page-app fallback: any other unknown path serves index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
