@@ -83,8 +83,9 @@ export default function About() {
                 </h3>
               </div>
 
-              <div className="max-w-[280px]">
-                {CERTIFICATIONS.map((cert) => (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {/* Only render certificates that have a real image URL (hides unfinished placeholders). */}
+                {CERTIFICATIONS.filter((cert) => cert.img.startsWith("http")).map((cert) => (
                   <div 
                     key={cert.id} 
                     onClick={() => setSelectedCert(cert)}
