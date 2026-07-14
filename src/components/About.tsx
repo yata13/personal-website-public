@@ -10,7 +10,7 @@ const CERTIFICATIONS = [
     issuer: "Geeztech Cyber Security Course",
     img: "https://i.postimg.cc/ZnnzZfnm/photo-2026-07-12-12-38-17.jpg",
     type: "Cyber Security Certificate",
-    date: "2026"
+    date: "2023"
   }
 ];
 
