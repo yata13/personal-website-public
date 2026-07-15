@@ -20,6 +20,14 @@ const CERTIFICATIONS = [
     type: "Cyber Security Certificate",
     date: "2023"
   },
+  {
+  id: "exceed-website-development",
+  title: "Website Development Advanced Training",
+  issuer: "Exceed Advanced Software Trainings",
+  img: "https://i.postimg.cc/4dKpWs3z/img20260715-10562792-result.jpg",
+  type: "Short Term Training Certificate",
+  date: "2025"
+},
   // TODO (Yared): your Full-Stack course certificate.
   // Replace the PLACEHOLDER text below and paste your certificate image URL into `img`.
   // (It will show a broken image until you add a real URL — so edit this before going live.)
